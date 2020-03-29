@@ -22,5 +22,4 @@ def game_hash(hash)
     }
   }
 
-  hashketball
 end
