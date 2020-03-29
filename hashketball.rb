@@ -74,16 +74,8 @@ def player_stats(playerName)
   game_hash.each do |team,data|
     data[:players].each do |player|
       if playerName == player[:player_name]
-        return {
-          :number => player[:number],
-          :shoe => player[:shoe],
-          :points => player[:points],
-          :rebounds => player[:rebounds],
-          :assists => player[:assists],
-          :steals => player[:steals],
-          :blocks => player[:blocks],
-          :slam_dunks => player[:slam_dunks]
-        }
+        player.delete(:player_name)
+        return player
     end
   end
 end
