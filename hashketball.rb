@@ -46,8 +46,8 @@ def shoe_size(name)
   end
 end
 
-def team_colors(team)
+def team_colors(teamname)
   game_hash.each do |team,data|
-    return data[:colors] if name == data[:team_name]
+    return data[:colors] if teamname == data[:team_name]
   end
 end
