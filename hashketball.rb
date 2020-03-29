@@ -51,3 +51,11 @@ def team_colors(teamname)
     return data[:colors] if teamname == data[:team_name]
   end
 end
+
+def team_names
+  newArr = []
+  game_hash.each do |team,data|
+    newArr << data[:team_name]
+  end
+  newArr
+end
