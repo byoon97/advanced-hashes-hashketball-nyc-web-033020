@@ -24,14 +24,14 @@ def game_hash
 
 end
 
-def num_points_scored(hash)
+def num_points_scored(hash, name)
   gameHash = game_hash(hash)
   gameHash.each do | teams , data |
       i = 0
       while i < data[:players].length do
         player = data[:players][i]
-        puts player
-        i += 1
+        if player[:player_name] == name
+        return player[:points]
       end
   end
 
