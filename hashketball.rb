@@ -86,7 +86,7 @@ def big_shoe_rebounds
   game_hash.each do |team,data|
     data[:players].each do |player|
       shoeSize << player[:shoe]
-      return player[:rebounds] if shoeSize.max == player[:shoe]
+      return player[:rebounds] if shoeSize.sort_by.max == player[:shoe]
       end
     end
   end
