@@ -33,6 +33,8 @@ def num_points_scored(hash, name)
         if player[:player_name] == name
         return player[:points]
       end
-  end
 
+      i += 1
+    end
+  end
 end
