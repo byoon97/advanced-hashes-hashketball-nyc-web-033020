@@ -46,7 +46,7 @@ def shoe_size(name)
   end
 end
 
-def team_colors(teamname)
+def team_colors(teamName)
   game_hash.each do |team,data|
     return data[:colors] if teamname == data[:team_name]
   end
@@ -60,11 +60,11 @@ def team_names
   newArr
 end
 
-def player_numbers(team)
+def player_numbers(teamName)
   jersey_numbers = []
   game_hash.each do |team,data|
     data[:players].each do |player|
-      jersey_numbers << player[:number] if team == data[:team_name]
+      jersey_numbers << player[:number] if teamName == data[:team_name]
     end
   end
   jersey_numbers
