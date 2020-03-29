@@ -75,13 +75,13 @@ def player_stats(playerName)
     data[:players].each do |player|
       if playerName == player[:player_name]
         return {
-          :number => player[:number]
-          :shoe => player[:shoe]
-          :points => player[:points]
-          :rebounds => player[:rebounds]
-          :assists => player[:assists]
-          :steals => player[:steals]
-          :blocks => player[:blocks]
+          :number => player[:number],
+          :shoe => player[:shoe],
+          :points => player[:points],
+          :rebounds => player[:rebounds],
+          :assists => player[:assists],
+          :steals => player[:steals],
+          :blocks => player[:blocks],
           :slam_dunks => player[:slam_dunks]
         }
     end
