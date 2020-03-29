@@ -80,3 +80,15 @@ def player_stats(playerName)
     end
   end
 end
+
+def big_shoe_rebounds
+  shoeSize = []
+  game_hash.each do |team,data|
+    data[:players].each do |player|
+      shoeSize << player[:shoe]
+      shoeSize.sort
+      return player[:rebounds] if shoeSize[0] == player[:shoe]
+      end
+    end
+  end
+end
