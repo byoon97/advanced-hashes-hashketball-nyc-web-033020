@@ -37,4 +37,6 @@ def num_points_scored(hash, name)
       i += 1
     end
   end
+
+  nil
 end
