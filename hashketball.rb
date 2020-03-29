@@ -69,3 +69,11 @@ def player_numbers(teamName)
   end
   jersey_numbers
 end
+
+def player_stats(playerName)
+  game_hash.each do |team,data|
+    data[:players].each do |players|
+      return players if playerName == players
+    end
+  end
+end
